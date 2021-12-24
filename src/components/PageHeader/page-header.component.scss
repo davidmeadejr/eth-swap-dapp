@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cloudswap-logo img {
+  height: 1.75rem;
+  width: 10.69rem;
+}
+
+.swap-claim-toggle {
+  border: 0.25rem solid #e6f7ff;
+  border-radius: 0.5rem;
+}
