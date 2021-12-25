@@ -1,0 +1,30 @@
+.connect-wallet-button {
+  width: 207px;
+  height: 40px;
+  background: #e6f7ff;
+  border-radius: 0.63rem;
+  border: none;
+  font-family: IBM Plex Mono, Roboto, Helvetica Neue;
+  cursor: pointer;
+}
+
+#accountDetailsContainer {
+  display: none;
+}
+
+.account-details {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  align-items: center;
+}
+
+#balanceDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0ed4ff;
+  width: 5rem;
+  height: 1.88rem;
+  border-radius: 0.63rem;
+}
