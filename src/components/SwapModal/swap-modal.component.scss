@@ -1,12 +1,319 @@
-.swap-modal-container {
-  width: 496px;
-  height: 395px;
-  margin: 8px;
-  display: flex;
-  flex-grow: 0;
+#swapModalContainer {
+  width: 31rem;
+  // height: 24.69rem;
+  margin: 0.5rem;
+  // display: flex;
+  // flex-grow: 0;
   box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px,
     rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;
   border-radius: 10px;
   background-color: rgb(230, 247, 255);
+  // justify-content: center;
+  height: 408px;
+}
+
+.swap-title {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 1.25rem;
+  font-family: IBM Plex Mono, Roboto, Helvetica Neue;
+  line-height: 1.6;
+}
+
+.from-border-container {
+  width: 29.06rem;
+  height: 8.13rem;
+  border: 2.5px solid rgb(145, 213, 255);
+  border-radius: 0.63rem;
+  margin: 0 0.63rem 0.63rem 0.63rem;
+}
+
+.from-content {
+  padding: 0.63rem 0.63rem 0 0.63rem;
+  font-size: 1rem;
+  font-family: IBM Plex Mono, Roboto, Helvetica Neue;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.from-dropdown-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.from-dropdown {
+  width: 6.06rem;
+  height: 2.25rem;
+  border-radius: 0.63rem;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px -1px,
+    rgb(0 0 0 / 14%) 0px 6px 10px 0px, rgb(0 0 0 / 12%) 0px 1px 18px 0px;
+  margin-top: 1rem;
+  background: #e6f7ff;
+  border: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  // padding: 0 0 0 0.5rem;
+}
+.amount-input-field {
+  border-radius: 0.25rem;
+  width: 11rem;
+  margin: 0.5rem;
+  padding: 1.16rem 0.88rem;
+  border-width: 0.06rem;
+  border-color: rgba(0, 0, 0, 0.23);
+  background-color: transparent;
+  outline: none;
+}
+
+.balance-field {
+  font-size: 1rem;
+  font-family: IBM Plex Mono, Roboto, Helvetica Neue;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#button--listbox-input--1,
+#button--listbox-input--2,
+#button--listbox-input--3,
+#button--listbox-input--4,
+#button--listbox-input--5 {
+  padding: 0 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  outline: none;
+}
+
+[data-reach-listbox-arrow][data-expanded] {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+[data-reach-listbox-list] {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  margin-top: -5.25rem;
+  border: none;
+  list-style-type: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-left: 0rem;
+  width: 80px;
+  outline: none;
+}
+
+[data-reach-listbox-arrow] {
+  padding: 0.25rem 0 0 0.5rem;
+  font-size: 0.5rem;
+}
+
+li {
+  margin: 1rem 0 0 0;
+}
+
+li:hover {
+  background: rgb(245, 245, 245);
+}
+
+#option-WETH--listbox-input {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 0;
+}
+#option-DAI--listbox-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 0;
+}
+#option-BAT--listbox-input {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+#option-USDC--listbox-input {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+#option-UNI--listbox-input {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.to-border-container {
+  width: 29.06rem;
+  height: 8.13rem;
+  border: 2.5px solid #91d5ff;
+  border-radius: 0.63rem;
+  margin: 0 0.63rem 0.63rem 0.63rem;
+}
+
+.to-content {
+  padding: 0.63rem 0.63rem 0 0.63rem;
+  font-size: 1rem;
+  font-family: IBM Plex Mono, Roboto, Helvetica Neue;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.to-dropdown-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.to-dropdown {
+  width: 6.06rem;
+  height: 2.25rem;
+  border-radius: 0.63rem;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px -1px,
+    rgb(0 0 0 / 14%) 0px 6px 10px 0px, rgb(0 0 0 / 12%) 0px 1px 18px 0px;
+  margin-top: 1rem;
+  background: #e6f7ff;
+  border: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  // padding: 0 0 0 0.5rem;
+}
+
+#option-WETH--listbox-input--2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 0;
+}
+#option-DAI--listbox-input--2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 0;
+}
+#option-BAT--listbox-input--2 {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+#option-USDC--listbox-input--2 {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+#option-UNI--listbox-input--2 {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.token-pair {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0.63rem 0 0.63rem;
+}
+
+#ctaSwapButton {
+  color: white;
+  background: #69c0ff;
+  border-radius: 3px;
+  width: 476px;
+  height: 36.5px;
+  margin: 0.63rem 0.63rem 0.63rem 0.63rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.63rem;
+}
+#ctaSwapButton:hover {
+  background-color: #3c99dc;
+}
+
+#ctaApproveButton {
+  color: white;
+  background: #69c0ff;
+  border-radius: 3px;
+  width: 469.96px;
+  height: 36.5px;
+  margin: 0rem 0.63rem 0.63rem 0.63rem;
+  border: none;
+  cursor: pointer;
+}
+
+#ctaApproveButton:hover {
+  background-color: #3c99dc;
+}
+
+.swap-info-container {
+  width: 29.06rem;
+  height: 8.13rem;
+  border: 2.5px solid #91d5ff;
+  border-radius: 0.63rem;
+  margin: 0.63rem 0.63rem 0 0.63rem;
+  background-color: #c0e4fc;
+}
+
+.swap-info-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0rem;
+}
+
+li {
+  margin: 0.5rem 0 0 0;
+}
+
+// li:hover {
+//   background: none;
+// }
+
+#ctaConfirmButton {
+  color: white;
+  background: #69c0ff;
+  border-radius: 3px;
+  width: 469.96px;
+  height: 36.5px;
+  margin: 0.5rem 0.63rem 0.63rem 0.63rem;
+  border: none;
+  cursor: pointer;
+}
+
+#ctaConfirmButton:hover {
+  background-color: #3c99dc;
 }

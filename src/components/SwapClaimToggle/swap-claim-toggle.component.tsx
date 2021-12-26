@@ -10,8 +10,9 @@ const SwapClaimToggle = () => {
    * Declares a new state variable called swapButtonColorOff to handle the swap button color toggle state.
    */
   const [tabName, setTabName] = useState("swap");
-  const [claimButtonColorOn, setClaimButtonColorOn] = useState("#0ed4ff");
-  const [swapButtonColorOff, setSwapButtonColorOff] = useState("#e6f7ff");
+  const [claimButtonColorToggle, setClaimButtonColorToggle] =
+    useState("#0ed4ff");
+  const [swapButtonColorToggle, setSwapButtonColorToggle] = useState("#e6f7ff");
 
   return (
     <Fragment>
@@ -19,13 +20,13 @@ const SwapClaimToggle = () => {
         <div className="swap-claim-toggle">
           <button
             style={{
-              background: swapButtonColorOff,
+              background: swapButtonColorToggle,
             }}
             className="swap-button"
             onClick={() => {
               setTabName("swap");
-              setClaimButtonColorOn("#0ed4ff");
-              setSwapButtonColorOff("#e6f7ff");
+              setClaimButtonColorToggle("#0ed4ff");
+              setSwapButtonColorToggle("#e6f7ff");
             }}
           >
             Swap
@@ -33,12 +34,12 @@ const SwapClaimToggle = () => {
           <button
             className="claim-button"
             style={{
-              background: claimButtonColorOn,
+              background: claimButtonColorToggle,
             }}
             onClick={() => {
               setTabName("claim");
-              setClaimButtonColorOn("#e6f7ff");
-              setSwapButtonColorOff("#0ed4ff");
+              setClaimButtonColorToggle("#e6f7ff");
+              setSwapButtonColorToggle("#0ed4ff");
             }}
           >
             Claim

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./connect-wallet.component.scss";
-import { ethers, providers, Wallet } from "ethers";
+import { ethers } from "ethers";
 
 // Global declaration which enables the window.ethereum global API to be used
 declare global {
