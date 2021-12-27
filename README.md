@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-It is currently deployed here: (https://eth-swap-dapp-qczhphb4e-davidmeadejr.vercel.app/)
+It is currently deployed via Vercel [here](https://eth-swap-dapp-qczhphb4e-davidmeadejr.vercel.app/)
 
 ## Available Scripts
 
