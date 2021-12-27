@@ -3,6 +3,7 @@ import "./swap-modal.component.scss";
 import { Listbox, ListboxOption } from "@reach/listbox";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
+
 /*
  * Changes the border colour on the account text field in the from section.
  */
