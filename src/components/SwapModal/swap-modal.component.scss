@@ -195,7 +195,6 @@
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  // padding: 0 0 0 0.5rem;
 }
 
 #option-WETH--listbox-input--2 {
@@ -205,11 +204,11 @@
   padding: 0.5rem;
   margin-top: 0;
 }
-#option-DAI--listbox-input--2 {
+#option-DAI--listbox-input li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 3rem;
   margin-top: 0;
 }
 #option-BAT--listbox-input--2 {
@@ -274,7 +273,7 @@
 
 .swap-info-container {
   width: 29.06rem;
-  height: 8.13rem;
+  height: 9rem;
   border: 2.5px solid #91d5ff;
   border-radius: 0.63rem;
   margin: 0.63rem 0.63rem 0 0.63rem;
@@ -302,10 +301,6 @@ ul {
 li {
   margin: 0.5rem 0 0 0;
 }
-
-// li:hover {
-//   background: none;
-// }
 
 #ctaConfirmButton {
   color: white;

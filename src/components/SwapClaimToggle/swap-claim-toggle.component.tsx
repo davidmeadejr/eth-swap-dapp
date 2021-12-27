@@ -6,8 +6,8 @@ import ClaimModal from "../ClaimModal/claim-modal.component";
 const SwapClaimToggle = () => {
   /*
    * Declares a new state variable called tabName to handle the modal state toggle functionality.
-   * Declares a new state variable called claimButtonColorOn to handle the claim button color toggle state.
-   * Declares a new state variable called swapButtonColorOff to handle the swap button color toggle state.
+   * Declares a new state variable called claimButtonColorToggle to handle the claim button color toggle state.
+   * Declares a new state variable called swapButtonColorToggle to handle the swap button color toggle state.
    */
   const [tabName, setTabName] = useState("swap");
   const [claimButtonColorToggle, setClaimButtonColorToggle] =

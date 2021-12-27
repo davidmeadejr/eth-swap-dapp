@@ -3,7 +3,9 @@ import "./swap-modal.component.scss";
 import { Listbox, ListboxOption } from "@reach/listbox";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
-
+/*
+ * Changes the border colour on the account text field in the from section.
+ */
 const CssTextField = styled(TextField, {
   shouldForwardProp: (props) => props !== "focusColor",
 })((p: any) => ({
@@ -28,25 +30,46 @@ const CssTextField = styled(TextField, {
 }));
 
 const SwapModal = () => {
-  //
+  /*
+   * Declares a new state variable called fromCoinState to handle the dropdown state in the "from" section.
+   * Declares a new state variable called toCoinState to handle the dropdown state in the "to" section.
+   * Declares a new state variable called swapButtonState which handles the swap, approve and confirm button states.
+   */
   const [fromCoinState, setFromCoinState] = useState("");
   const [toCoinState, setToCoinState] = useState("");
-
   const [swapButtonState, setSwapButtonState] = useState("SWAP");
 
+  /*
+   * In the initial swap state when the user clicks on the SWAP button
+   * useState swapButtonState equals "APPROVE"
+   * then hideSwapButton is called
+   * which hides the swap button.
+   */
   const hideSwapButton = () => {
     return (document.getElementById("ctaSwapButton")!.style.visibility =
       "hidden");
   };
 
+  /*
+   * In approve state when the user clicks on the APPROVE button
+   * useState swapButtonState equals "CONFIRM"
+   * then hideApproveButton is called
+   * which hides the approve button.
+   */
   const hideApproveButton = () => {
     return (document.getElementById("ctaApproveButton")!.style.visibility =
       "hidden");
   };
 
-  const hideModalContainer = () => {
+  /*
+   * In approve state when the user clicks on the APPROVE button
+   * useState swapButtonState equals "CONFIRM"
+   * then expandModalContainer is called
+   * which increases the height of the modal container on the swap tab.
+   */
+  const expandModalContainer = () => {
     return (document.getElementById("swapModalContainer")!.style.height =
-      "550px");
+      "580px");
   };
 
   return (
@@ -71,11 +94,6 @@ const SwapModal = () => {
               <ListboxOption value="UNI">UNI</ListboxOption>
             </Listbox>
             <div>
-              {/* <TextField
-                id="outlined-search"
-                label="account"
-                type="search"
-              /> */}
               <CssTextField label="account" focusColor="rgb(145, 213, 255)" />
             </div>
           </div>
@@ -156,7 +174,7 @@ const SwapModal = () => {
       <div>
         {swapButtonState === "CONFIRM" &&
           hideApproveButton() &&
-          hideModalContainer() && (
+          expandModalContainer() && (
             <Fragment>
               <div>
                 <div className="swap-info-container">
