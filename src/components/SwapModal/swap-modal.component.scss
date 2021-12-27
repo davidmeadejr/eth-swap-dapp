@@ -39,6 +39,7 @@
 .from-dropdown-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.63rem;
 }
 
 .from-dropdown {
@@ -54,8 +55,8 @@
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  // padding: 0 0 0 0.5rem;
 }
+
 .amount-input-field {
   border-radius: 0.25rem;
   width: 11rem;
@@ -86,46 +87,49 @@
   outline: none;
 }
 
-[data-reach-listbox-arrow][data-expanded] {
-  transform: rotate(180deg);
-  transition: 1s;
-}
-
 [data-reach-listbox-list] {
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
-  margin-top: -5.25rem;
   border: none;
   list-style-type: none;
-  margin-left: 0.5rem;
   cursor: pointer;
-  padding-top: 1rem;
-  padding-left: 0rem;
-  width: 80px;
+  width: 78px;
   outline: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  margin-top: -18px;
+  margin-right: -31rem;
+}
+
+[data-reach-listbox-input] span {
+  display: flex;
+  align-items: center;
+  outline: none;
+  padding-left: 0.5rem;
 }
 
 [data-reach-listbox-arrow] {
-  padding: 0.25rem 0 0 0.5rem;
+  padding: 0.25rem 0 0 1rem;
   font-size: 0.5rem;
 }
 
-li {
-  margin: 1rem 0 0 0;
-}
-
-li:hover {
-  background: rgb(245, 245, 245);
-}
-
-#option-WETH--listbox-input {
+[data-reach-listbox-group] {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+[data-reach-listbox-option] {
   padding: 0.5rem;
   margin-top: 0;
 }
+
+[data-reach-listbox-option]:hover {
+  background: rgb(245, 245, 245);
+}
+
 #option-DAI--listbox-input {
   display: flex;
   justify-content: center;

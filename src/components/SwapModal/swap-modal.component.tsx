@@ -1,6 +1,31 @@
 import React, { Fragment, useState } from "react";
 import "./swap-modal.component.scss";
 import { Listbox, ListboxOption } from "@reach/listbox";
+import TextField from "@mui/material/TextField";
+import styled from "@emotion/styled";
+
+const CssTextField = styled(TextField, {
+  shouldForwardProp: (props) => props !== "focusColor",
+})((p: any) => ({
+  // input label when focused
+  "& label.Mui-focused": {
+    color: p.focusColor,
+  },
+  // focused color for input with variant='standard'
+  "& .MuiInput-underline:after": {
+    borderBottomColor: p.focusColor,
+  },
+  // focused color for input with variant='filled'
+  "& .MuiFilledInput-underline:after": {
+    borderBottomColor: p.focusColor,
+  },
+  // focused color for input with variant='outlined'
+  "& .MuiOutlinedInput-root": {
+    "&.Mui-focused fieldset": {
+      borderColor: p.focusColor,
+    },
+  },
+}));
 
 const SwapModal = () => {
   //
@@ -24,12 +49,6 @@ const SwapModal = () => {
       "550px");
   };
 
-  // const hideModalContainer = () => {
-  //   return document
-  //     .getElementById("swapModalContainer")!
-  //     .setAttribute("style", "height: 500px");
-  // };
-
   return (
     <div id="swapModalContainer">
       <div className="swap-title">Swap</div>
@@ -51,11 +70,14 @@ const SwapModal = () => {
               <ListboxOption value="USDC">USDC</ListboxOption>
               <ListboxOption value="UNI">UNI</ListboxOption>
             </Listbox>
-            <input
-              type="text"
-              placeholder="amount"
-              className="amount-input-field"
-            ></input>
+            <div>
+              {/* <TextField
+                id="outlined-search"
+                label="account"
+                type="search"
+              /> */}
+              <CssTextField label="account" focusColor="rgb(145, 213, 255)" />
+            </div>
           </div>
           <div className="balance-field"> Balance: ETH {fromCoinState}</div>
         </div>
